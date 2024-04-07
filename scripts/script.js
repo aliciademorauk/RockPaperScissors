@@ -15,13 +15,15 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame() {
-    const computerSelection = getComputerChoice();
     let playerSelection;
     let userWins = 0;
     let computerWins = 0;
-    do {playerSelection = prompt("Rock, paper or scissors? Please type your choice with no spacing and ensure to check your spelling.")
-    } while (!listOfChoices.includes(playerSelection));
-    for (let i = 0; i < 5; i++) {
+
+    for (let i = 1; i <= 5; i++) {
+        do {
+            playerSelection = prompt(`ROUND ${i}: Rock, paper or scissors?\nPlease, type your choice with no spacing and ensure to check your spelling.`)
+        } while (!listOfChoices.includes(playerSelection));
+        let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
         if (result.startsWith("You have won!")) {
             userWins++;
@@ -29,11 +31,12 @@ function playGame() {
             computerWins++;
         }
     }
-    if (userWins > computerWins) {
-        return `You have won! You won ${userWins} times against the computer.`;
-    } else if (computerWins > userWins) {
-        return `You have lost! The computer won ${computerWins} times against you.`;
-    } else {return "There is no winner!";}
+
+    return userWins > computerWins 
+    ? `You have won! You won ${userWins} times against the computer.`
+    : (computerWins > userWins 
+        ? `You have lost! The computer won ${computerWins} times against you.` 
+        : "There is no winner!")
 }
   
 
