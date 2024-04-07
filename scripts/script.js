@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let choiceIndex = Math.floor(Math.random() * listOfChoices.length);
+    const choiceIndex = Math.floor(Math.random() * listOfChoices.length);
     return listOfChoices[choiceIndex];
 }
 
@@ -15,7 +15,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame() {
-    let computerSelection = getComputerChoice();
+    const computerSelection = getComputerChoice();
     let playerSelection;
     let userWins = 0;
     let computerWins = 0;
