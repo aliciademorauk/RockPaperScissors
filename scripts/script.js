@@ -39,7 +39,6 @@ function playGame() {
         : "There is no winner!")
 }
   
-
 const listOfChoices = ["rock", "paper", "scissors"];
 console.log(playGame());
   
