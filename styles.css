@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    background-color: #ffffe3;
+    font-family: 'Copperplate', 'Fantasy';
+    color: #ff6f69;
+}
+
+body {
+    font-size: xx-large;
+}
+
+button {
+    font-size: xx-large;
+    border-color: #e2eeff;
+    background-color: #ddfffc;
+    margin: 0% 5%;
+}
+
+.container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.choices {
+    flex-direction: row;
+}
+
+.game-winner {
+    flex-direction: column;
+}
